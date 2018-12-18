@@ -60,39 +60,24 @@ switch (event.key) {
     rechts.classList.add("bye");
     break;
 }
+}
+
+let removeClass = function(event){ // class verwijderen
 switch (event.key) {
   case "ArrowUp":
-    boven.classList.add("highlight");
+    boven.classList.remove("bye");
     break;
   case "ArrowDown":
-    beneden.classList.add("highlight");
+    beneden.classList.remove("bye");
   break;
   case "ArrowLeft":
-    links.classList.add("highlight");
+    links.classList.remove("bye");
   break;
   case "ArrowRight":
-    rechts.classList.add("highlight");
+    rechts.classList.remove("bye");
     break;
 }
 }
 
 window.addEventListener("keydown", addClass);
-
-let removeClass = function(event){ // class verwijderen
-switch (event.key) {
-  case "ArrowUp":
-    boven.classList.remove("highlight");
-    break;
-  case "ArrowDown":
-    beneden.classList.remove("highlight");
-  break;
-  case "ArrowLeft":
-    links.classList.remove("highlight");
-  break;
-  case "ArrowRight":
-    rechts.classList.remove("highlight");
-    break;
-}
-}
-
 window.addEventListener("keydown", removeClass);
